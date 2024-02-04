@@ -1,6 +1,6 @@
 # MENTORIZACIÓN DEL ALUMNADO
 
-Para el proyecto grupal "Mentorización del alumnado", se deben seguir las siguientes instrucciones detalladas:
+Para el proyecto grupal "Mentorización del alumnado", se deben seguir las siguientes instrucciones:
 
 1. El tutor creará un repositorio en el cual todos los alumnos colaborarán. El repositorio debe tener una estructura de carpetas con el siguiente formato: `src/components/[nombre_del_componente]`. Por ejemplo, si el componente es un botón, la ruta sería `src/components/Button`.
 2. El proyecto ya tienen las dependencias instaladas, los estilos iniciales y la variables creadas. Así como el lintado configurado.
