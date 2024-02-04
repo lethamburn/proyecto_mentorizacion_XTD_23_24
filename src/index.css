@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+  --general100: #131523;
+  --general90: #333752;
+  --general80: #5a607f;
+  --general70: #7e84a3;
+  --general60: #a1a7c4;
+  --general50: #d7dbec;
+  --general40: #e6e9f4;
+  --general30: #f5f7fa;
+  --primary100: #1e5eff;
+  --primary90: #336dff;
+  --primary80: #4f81ff;
+  --primary70: #608dff;
+  --primary60: #89abff;
+  --primary50: #b6cbff;
+  --primary40: #d9e4ff;
+  --primary30: #ecf2ff;
+  --red100: #f0142f;
+  --red90: #f12b43;
+  --red80: #f34359;
+  --red70: #f45a6d;
+  --red60: #f8919d;
+  --red50: #fab3bc;
+  --red40: #fcd5d9;
+  --red30: #ffe7ea;
+  --green100: #06a561;
+  --green90: #1df286;
+  --green80: #25e191;
+  --green70: #48e9a5;
+  --green60: #74efb9;
+  --green50: #95f6cc;
+  --green40: #c4f8e2;
+  --green30: #daf9ec;
+  --yellow100: #f99600;
+  --yellow90: #ffc700;
+  --yellow80: #ffd613;
+  --yellow70: #ffe45f;
+  --yellow60: #ffe582;
+  --yellow50: #ffeca3;
+  --yellow40: #fff4c9;
+  --yellow30: #fff9e1;
+}
