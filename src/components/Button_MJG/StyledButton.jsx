@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 const StyledButton = styled.button`
-  background-color: ${({ $white, $bgColor }) => $white ? 'var(--white)' : $bgColor || 'var(--primary100)'};
-  color: ${({ $white, $textColor }) => $white ? 'var(--primary100)' : $textColor || 'var(--white)'}; // Usando $textColor para el color del texto
-  border: ${({ $white }) => $white ? '1px solid var(--general50)' : 'none'};
+  background-color: ${({ $bgColor }) => $bgColor || 'var(--primary100)'};
+  color: ${({ $textColor }) => $textColor || 'var(--white)'};
+  border: ${({ $borderColor }) => $borderColor ? `1px solid ${$borderColor}` : 'none'};
   border-radius: 5px;
   cursor: pointer;
   display: inline-flex;
@@ -20,10 +20,10 @@ const StyledButton = styled.button`
   letter-spacing: 0;
 
   &:hover {
-    background-color: ${({ $hoverColor, $white }) => $white ? 'var(--primary100)' : $hoverColor || 'var(--primary40)'};
-    color: ${({ $hoverTextColor, $white }) => $white ? 'var(--white)' : $hoverTextColor || 'var(--primary100)'};
+    background-color: ${({ $hoverColor }) => $hoverColor || 'var(--primary40)'};
+    color: ${({ $hoverTextColor }) => $hoverTextColor || 'var(--primary100)'};
     svg, i {
-      fill: ${({ $hoverTextColor, $white }) => $white ? 'var(--white)' : $hoverTextColor || 'var(--primary100)'};
+      fill: ${({ $hoverTextColor }) => $hoverTextColor || 'var(--primary100)'};
     }
   }
 
@@ -31,7 +31,7 @@ const StyledButton = styled.button`
     align-self: center;
     margin: 0 auto;
     font-size: 1em;
-    fill: ${({ $white, $textColor }) => $white ? 'var(--primary100)' : $textColor || 'inherit'}; // Usando $textColor para el color de los íconos
+    fill: ${({ $textColor }) => $textColor || 'inherit'};
   }
 
   ${({ $iconOnly }) => $iconOnly && `

@@ -1,6 +1,6 @@
 import StyledButton from './StyledButton'
 
-const Button = ({ children, iconOnly, width, height, bgColor, hoverColor, hoverTextColor, textColor, white }) => {
+const Button = ({ children, iconOnly, width, height, bgColor, hoverColor, hoverTextColor, textColor, borderColor }) => {
   return (
     <StyledButton
       $iconOnly={iconOnly}
@@ -10,7 +10,7 @@ const Button = ({ children, iconOnly, width, height, bgColor, hoverColor, hoverT
       $textColor={textColor}
       $hoverColor={hoverColor}
       $hoverTextColor={hoverTextColor}
-      $white={white}
+      $borderColor={borderColor}
     >
       {children}
     </StyledButton>

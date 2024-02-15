@@ -57,7 +57,6 @@ const ButtonViewer = () => {
           </Button>
         </ButtonsRow>
       </ButtonsGroup>
-
       <ButtonsGroup>
         <GroupTitle>Destructive</GroupTitle>
         <ButtonsRow>
@@ -74,13 +73,23 @@ const ButtonViewer = () => {
       <ButtonsGroup>
         <GroupTitle>White</GroupTitle>
         <ButtonsRow>
-          <Button white width="99px" height="48px">Button</Button>
-          <Button white width="119px" height="48px">
-            <i className="fas fa-check icon-check"></i>
+          <Button bgColor="var(--white)" textColor="var(--primary100)"
+          hoverColor="var(--primary100)" hoverTextColor="var(--white)"
+          borderColor="var(--general50)" width="99px" height="48px">
             Button
           </Button>
-          <Button white iconOnly width="48px" height="48px">
-            <i className="fas fa-cog icon-cog"></i>
+          <Button
+          bgColor="var(--white)" textColor="var(--primary100)"
+          hoverColor="var(--primary100)" hoverTextColor="var(--white)"
+          borderColor="var(--general50)" width="119px" height="48px">
+          <i className="fas fa-check icon-check"></i>
+            Button
+          </Button>
+          <Button
+          bgColor="var(--white)" textColor="var(--primary100)"
+          hoverColor="var(--primary100)" hoverTextColor="var(--white)"
+          borderColor="var(--general50)" iconOnly width="48px" height="48px">
+          <i className="fas fa-cog icon-cog"></i>
           </Button>
         </ButtonsRow>
       </ButtonsGroup>
@@ -97,7 +106,6 @@ const ButtonViewer = () => {
           </Button>
         </ButtonsRow>
       </ButtonsGroup>
-
       <ButtonsGroup>
         <GroupTitle>Destructive Secondary</GroupTitle>
         <ButtonsRow>
