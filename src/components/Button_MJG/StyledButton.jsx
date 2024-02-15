@@ -14,7 +14,7 @@ const StyledButton = styled.button`
   height: ${({ height }) => height || '40px'};
   padding: 10px ${({ $iconOnly }) => $iconOnly ? '10px' : '20px'};
   font-family: 'Inter', sans-serif;
-  font-size: 16px;
+  font-size: ${({ $textSize }) => $textSize || '16px'};
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0;
@@ -34,11 +34,11 @@ const StyledButton = styled.button`
     fill: ${({ $textColor }) => $textColor || 'inherit'};
   }
 
-  ${({ $iconOnly }) => $iconOnly && `
+  ${({ $iconOnly, width, height }) => $iconOnly && `
     padding: 0;
     justify-content: center;
-    width: 48px;
-    height: 48px;
+    width: ${width || '48px'};
+    height: ${height || '48px'};
   `}
 `
 
