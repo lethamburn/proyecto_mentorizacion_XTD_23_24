@@ -46,7 +46,7 @@ const App = () => {
         toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
         isSidebarOpen={isSidebarOpen}
       />
-      <div style={{ display: 'flex', height: '100vh', paddingTop: '50px' }}>
+      <div style={{ display: 'flex', minHeight: '100vh', paddingTop: '50px' }}>
         <Sidebar
           isVisible={isSidebarOpen}
           developers={developers}

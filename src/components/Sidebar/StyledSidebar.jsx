@@ -10,7 +10,7 @@ export const SidebarContainer = styled.div.withConfig({
   background-color: var(--general30);
   color: var(--general150);
   box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.1);
-  height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
   overflow-y: auto;
   position: fixed;
   left: 0;
