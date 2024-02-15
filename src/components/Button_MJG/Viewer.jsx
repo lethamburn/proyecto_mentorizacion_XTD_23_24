@@ -87,25 +87,26 @@ const ButtonViewer = () => {
       <ButtonsGroup>
         <GroupTitle>Secondary</GroupTitle>
         <ButtonsRow>
-          <Button bgColor="var(--primary40)" hoverColor="var(--primary100)" hoverTextColor="var(--white)" width="99px" height="48px">Button</Button>
-          <Button bgColor="var(--primary40)" hoverColor="var(--primary100)" hoverTextColor="var(--white)" width="119px" height="48px">
+          <Button bgColor="var(--primary40)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="var(--white)" width="99px" height="48px">Button</Button>
+          <Button bgColor="var(--primary40)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="var(--white)" width="119px" height="48px">
             <i className="fas fa-check icon-check"></i>
             Button
           </Button>
-          <Button bgColor="var(--primary40)" hoverColor="var(--primary100)" hoverTextColor="var(--white)" iconOnly width="48px" height="48px">
+          <Button bgColor="var(--primary40)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="var(--white)" iconOnly width="48px" height="48px">
             <i className="fas fa-cog icon-cog"></i>
           </Button>
         </ButtonsRow>
       </ButtonsGroup>
+
       <ButtonsGroup>
         <GroupTitle>Destructive Secondary</GroupTitle>
         <ButtonsRow>
-          <Button bgColor="var(--red30)" hoverColor="var(--red100)" hoverTextColor="var(--white)" width="99px" height="48px">Button</Button>
-          <Button bgColor="var(--red30)" hoverColor="var(--red100)" hoverTextColor="var(--white)" width="119px" height="48px">
+          <Button bgColor="var(--red30)" textColor="var(--red100)" hoverColor="var(--red100)" hoverTextColor="var(--white)" width="99px" height="48px">Button</Button>
+          <Button bgColor="var(--red30)" textColor="var(--red100)" hoverColor="var(--red100)" hoverTextColor="var(--white)" width="119px" height="48px">
             <i className="fas fa-trash icon-trash"></i>
             Button
           </Button>
-          <Button bgColor="var(--red30)" hoverColor="var(--red100)" hoverTextColor="var(--white)" iconOnly width="48px" height="48px">
+          <Button bgColor="var(--red30)" textColor="var(--red100)" hoverColor="var(--red100)" hoverTextColor="var(--white)" iconOnly width="48px" height="48px">
             <i className="fas fa-trash icon-trash"></i>
           </Button>
         </ButtonsRow>
