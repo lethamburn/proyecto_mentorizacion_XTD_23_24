@@ -6,8 +6,19 @@ const ToggleViewerContainer = styled.div`
   margin-top: 20px;
   padding-left: 20px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 20px;
+`
+
+const ToggleLabel = styled.div`
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--general100);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 `
 
 const ToggleViewer = () => {
@@ -19,20 +30,20 @@ const ToggleViewer = () => {
 
   return (
     <ToggleViewerContainer>
-      <div>
-        <h3>Small</h3>
-        <Toggle size="small" checked={checked.small} onChange={() => handleChange('small')} />
-      </div>
-
-      <div>
-        <h3>Medium</h3>
-        <Toggle size="medium" checked={checked.medium} onChange={() => handleChange('medium')} />
-      </div>
-
-      <div>
-        <h3>Large</h3>
+      <ToggleLabel>
         <Toggle size="large" checked={checked.large} onChange={() => handleChange('large')} />
-      </div>
+        <span>Large</span>
+      </ToggleLabel>
+
+      <ToggleLabel>
+        <Toggle size="medium" checked={checked.medium} onChange={() => handleChange('medium')} />
+        <span>Medium</span>
+      </ToggleLabel>
+
+      <ToggleLabel>
+        <Toggle size="small" checked={checked.small} onChange={() => handleChange('small')} />
+        <span>Small</span>
+      </ToggleLabel>
     </ToggleViewerContainer>
   )
 }
