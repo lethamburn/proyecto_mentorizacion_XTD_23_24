@@ -6,13 +6,31 @@ const sizes = {
   large: { width: '48px', height: '28px', circleSize: '20px' }
 }
 
+const colorMap = {
+  blue: {
+    base: 'var(--primary40)',
+    hover: 'var(--primary60)',
+    active: 'var(--primary100)'
+  },
+  red: {
+    base: 'var(--red40)',
+    hover: 'var(--red60)',
+    active: 'var(--red100)'
+  },
+  grey: {
+    base: 'var(--general40)',
+    hover: 'var(--general60)',
+    active: 'var(--general90)'
+  }
+}
+
 const StyledToggle = styled.div`
   position: relative;
   width: ${({ size }) => sizes[size].width};
   height: ${({ size }) => sizes[size].height};
   border-radius: ${({ size }) => sizes[size].height};
-  background-color: var(--primary40);
-  
+  background-color: ${({ color }) => colorMap[color].base};
+
   input {
     opacity: 0;
     width: 0;
@@ -26,7 +44,7 @@ const StyledToggle = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--primary40);
+    background-color: ${({ color }) => colorMap[color].base};
     transition: 0.4s;
     border-radius: ${({ size }) => sizes[size].height};
 
@@ -36,19 +54,19 @@ const StyledToggle = styled.div`
       height: ${({ size }) => sizes[size].circleSize};
       width: ${({ size }) => sizes[size].circleSize};
       left: 4px;
-      background-color: var(--general30);
+      background-color: white;
       transition: 0.4s;
       border-radius: 50%;
       bottom: ${({ size }) => `calc((${sizes[size].height} - ${sizes[size].circleSize}) / 2)`};
     }
 
     &:hover {
-      background-color: var(--primary60);
+      background-color: ${({ color }) => colorMap[color].hover};
     }
   }
 
   input:checked + label {
-    background-color: var(--primary100);
+    background-color: ${({ color }) => colorMap[color].active};
   }
 
   input:checked + label:before {

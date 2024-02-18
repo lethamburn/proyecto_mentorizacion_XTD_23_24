@@ -1,8 +1,8 @@
 import StyledSpinner from './StyledSpinner'
 
-const Spinner = ({ size }) => {
+const Spinner = ({ size, color }) => {
   return (
-    <StyledSpinner size={size}>
+    <StyledSpinner size={size} color={color}>
       <div className="spinner"></div>
     </StyledSpinner>
   )

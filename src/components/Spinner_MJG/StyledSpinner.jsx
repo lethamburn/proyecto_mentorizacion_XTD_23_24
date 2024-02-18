@@ -19,9 +19,9 @@ const StyledSpinner = styled.div`
   display: inline-block;
   width: ${({ size }) => sizes[size].size};
   height: ${({ size }) => sizes[size].size};
-  border: 4px solid var(--primary40);
+  border: 4px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  border-top-color: var(--primary100);
+  border-top-color: ${({ color }) => `var(--${color})`};
   animation: ${spin} 1s linear infinite;
 
   .spinner {
