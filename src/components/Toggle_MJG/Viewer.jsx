@@ -11,7 +11,6 @@ const ToggleViewerContainer = styled.div`
 `
 
 const MainTitle = styled.div`
-  font-family: 'Inter', sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
@@ -22,7 +21,6 @@ const MainTitle = styled.div`
 `
 
 const ToggleSizeTitle = styled.div`
-  font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -38,7 +36,6 @@ const TogglesContainer = styled.div`
 `
 
 const ToggleLabel = styled.div`
-  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -57,7 +54,7 @@ const ToggleViewer = () => {
 
   return (
     <ToggleViewerContainer>
-      <MainTitle>Toggle</MainTitle>
+      <MainTitle>Toggles</MainTitle>
       <ToggleSizeTitle>Toggle Size</ToggleSizeTitle>
       <TogglesContainer>
         <ToggleLabel>

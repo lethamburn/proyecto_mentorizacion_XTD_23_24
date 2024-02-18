@@ -13,7 +13,6 @@ const StyledButton = styled.button`
   width: ${({ width }) => width || 'auto'};
   height: ${({ height }) => height || '40px'};
   padding: 10px ${({ $iconOnly }) => $iconOnly ? '10px' : '20px'};
-  font-family: 'Inter', sans-serif;
   font-size: ${({ $textSize }) => $textSize || '16px'};
   font-weight: 400;
   line-height: 24px;

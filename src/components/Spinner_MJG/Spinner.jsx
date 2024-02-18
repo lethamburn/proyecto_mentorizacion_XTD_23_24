@@ -1,7 +1,11 @@
 import StyledSpinner from './StyledSpinner'
 
-const Spinner = ({ type }) => {
-  return <StyledSpinner type={type} />
+const Spinner = ({ size }) => {
+  return (
+    <StyledSpinner size={size}>
+      <div className="spinner"></div>
+    </StyledSpinner>
+  )
 }
 
 export default Spinner

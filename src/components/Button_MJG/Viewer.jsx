@@ -12,7 +12,6 @@ const ButtonsContainer = styled.div`
 const SectionTitle = styled.h2`
   width: 100%;
   color: var(--general100);
-  font-family: 'Inter', sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
@@ -26,7 +25,6 @@ const ButtonsGroup = styled.div`
 `
 
 const GroupTitle = styled.div`
-  font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
