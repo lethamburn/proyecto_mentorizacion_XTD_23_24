@@ -71,21 +71,21 @@ const ButtonViewer = () => {
       <ButtonsGroup>
         <GroupTitle>White</GroupTitle>
         <ButtonsRow>
-          <Button bgColor="var(--white)" textColor="var(--primary100)"
-          hoverColor="var(--primary100)" hoverTextColor="var(--white)"
+          <Button bgColor="white" textColor="var(--primary100)"
+          hoverColor="var(--primary100)" hoverTextColor="white"
           borderColor="var(--general50)" width="99px" height="48px">
             Button
           </Button>
           <Button
-          bgColor="var(--white)" textColor="var(--primary100)"
-          hoverColor="var(--primary100)" hoverTextColor="var(--white)"
+          bgColor="white" textColor="var(--primary100)"
+          hoverColor="var(--primary100)" hoverTextColor="white"
           borderColor="var(--general50)" width="119px" height="48px">
           <i className="fas fa-check icon-check"></i>
             Button
           </Button>
           <Button
-          bgColor="var(--white)" textColor="var(--primary100)"
-          hoverColor="var(--primary100)" hoverTextColor="var(--white)"
+          bgColor="white" textColor="var(--primary100)"
+          hoverColor="var(--primary100)" hoverTextColor="white"
           borderColor="var(--general50)" iconOnly width="48px" height="48px">
           <i className="fas fa-cog icon-cog"></i>
           </Button>
@@ -94,12 +94,12 @@ const ButtonViewer = () => {
       <ButtonsGroup>
         <GroupTitle>Secondary</GroupTitle>
         <ButtonsRow>
-          <Button bgColor="var(--primary40)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="var(--white)" width="99px" height="48px">Button</Button>
-          <Button bgColor="var(--primary40)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="var(--white)" width="119px" height="48px">
+          <Button bgColor="var(--primary40)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="white" width="99px" height="48px">Button</Button>
+          <Button bgColor="var(--primary40)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="white" width="119px" height="48px">
             <i className="fas fa-check icon-check"></i>
             Button
           </Button>
-          <Button bgColor="var(--primary40)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="var(--white)" iconOnly width="48px" height="48px">
+          <Button bgColor="var(--primary40)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="white" iconOnly width="48px" height="48px">
             <i className="fas fa-cog icon-cog"></i>
           </Button>
         </ButtonsRow>
@@ -107,12 +107,12 @@ const ButtonViewer = () => {
       <ButtonsGroup>
         <GroupTitle>Destructive Secondary</GroupTitle>
         <ButtonsRow>
-          <Button bgColor="var(--red30)" textColor="var(--red100)" hoverColor="var(--red100)" hoverTextColor="var(--white)" width="99px" height="48px">Button</Button>
-          <Button bgColor="var(--red30)" textColor="var(--red100)" hoverColor="var(--red100)" hoverTextColor="var(--white)" width="119px" height="48px">
+          <Button bgColor="var(--red30)" textColor="var(--red100)" hoverColor="var(--red100)" hoverTextColor="white" width="99px" height="48px">Button</Button>
+          <Button bgColor="var(--red30)" textColor="var(--red100)" hoverColor="var(--red100)" hoverTextColor="white" width="119px" height="48px">
             <i className="fas fa-trash icon-trash"></i>
             Button
           </Button>
-          <Button bgColor="var(--red30)" textColor="var(--red100)" hoverColor="var(--red100)" hoverTextColor="var(--white)" iconOnly width="48px" height="48px">
+          <Button bgColor="var(--red30)" textColor="var(--red100)" hoverColor="var(--red100)" hoverTextColor="white" iconOnly width="48px" height="48px">
             <i className="fas fa-trash icon-trash"></i>
           </Button>
         </ButtonsRow>
@@ -147,12 +147,12 @@ const ButtonViewer = () => {
       <ButtonsGroup>
         <GroupTitle>White</GroupTitle>
         <ButtonsRow>
-          <Button bgColor="var(--white)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="var(--white)" borderColor="var(--general50)" width="99px" height="40px">Button</Button>
-          <Button bgColor="var(--white)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="var(--white)" borderColor="var(--general50)" width="119px" height="40px">
+          <Button bgColor="white" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="white" borderColor="var(--general50)" width="99px" height="40px">Button</Button>
+          <Button bgColor="white" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="white" borderColor="var(--general50)" width="119px" height="40px">
             <i className="fas fa-check icon-check"></i>
             Button
           </Button>
-          <Button bgColor="var(--white)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="var(--white)" borderColor="var(--general50)" iconOnly width="40px" height="40px">
+          <Button bgColor="white" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="white" borderColor="var(--general50)" iconOnly width="40px" height="40px">
             <i className="fas fa-cog icon-cog"></i>
           </Button>
         </ButtonsRow>
@@ -160,12 +160,12 @@ const ButtonViewer = () => {
       <ButtonsGroup>
         <GroupTitle>Secondary</GroupTitle>
         <ButtonsRow>
-          <Button bgColor="var(--primary40)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="var(--white)" width="99px" height="40px">Button</Button>
-          <Button bgColor="var(--primary40)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="var(--white)" width="119px" height="40px">
+          <Button bgColor="var(--primary40)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="white" width="99px" height="40px">Button</Button>
+          <Button bgColor="var(--primary40)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="white" width="119px" height="40px">
             <i className="fas fa-check icon-check"></i>
             Button
           </Button>
-          <Button bgColor="var(--primary40)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="var(--white)" iconOnly width="40px" height="40px">
+          <Button bgColor="var(--primary40)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="white" iconOnly width="40px" height="40px">
             <i className="fas fa-cog icon-cog"></i>
           </Button>
         </ButtonsRow>
@@ -173,12 +173,12 @@ const ButtonViewer = () => {
       <ButtonsGroup>
         <GroupTitle>Destructive Secondary</GroupTitle>
         <ButtonsRow>
-          <Button bgColor="var(--red30)" textColor="var(--red100)" hoverColor="var(--red100)" hoverTextColor="var(--white)" width="99px" height="40px">Button</Button>
-          <Button bgColor="var(--red30)" textColor="var(--red100)" hoverColor="var(--red100)" hoverTextColor="var(--white)" width="119px" height="40px">
+          <Button bgColor="var(--red30)" textColor="var(--red100)" hoverColor="var(--red100)" hoverTextColor="white" width="99px" height="40px">Button</Button>
+          <Button bgColor="var(--red30)" textColor="var(--red100)" hoverColor="var(--red100)" hoverTextColor="white" width="119px" height="40px">
             <i className="fas fa-trash icon-trash"></i>
             Button
           </Button>
-          <Button bgColor="var(--red30)" textColor="var(--red100)" hoverColor="var(--red100)" hoverTextColor="var(--white)" iconOnly width="40px" height="40px">
+          <Button bgColor="var(--red30)" textColor="var(--red100)" hoverColor="var(--red100)" hoverTextColor="white" iconOnly width="40px" height="40px">
             <i className="fas fa-trash icon-trash"></i>
           </Button>
         </ButtonsRow>
@@ -213,12 +213,12 @@ const ButtonViewer = () => {
       <ButtonsGroup>
         <GroupTitle>White</GroupTitle>
         <ButtonsRow>
-          <Button textSize="14px" bgColor="var(--white)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="var(--white)" borderColor="var(--general50)" width="84px" height="36px">Button</Button>
-          <Button textSize="14px" bgColor="var(--white)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="var(--white)" borderColor="var(--general50)" width="104px" height="36px">
+          <Button textSize="14px" bgColor="white" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="white" borderColor="var(--general50)" width="84px" height="36px">Button</Button>
+          <Button textSize="14px" bgColor="white" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="white" borderColor="var(--general50)" width="104px" height="36px">
             <i className="fas fa-check icon-check"></i>
             Button
           </Button>
-          <Button bgColor="var(--white)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="var(--white)" borderColor="var(--general50)" iconOnly width="36px" height="36px">
+          <Button bgColor="white" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="white" borderColor="var(--general50)" iconOnly width="36px" height="36px">
             <i className="fas fa-cog icon-cog"></i>
           </Button>
         </ButtonsRow>
@@ -226,12 +226,12 @@ const ButtonViewer = () => {
       <ButtonsGroup>
         <GroupTitle>Secondary</GroupTitle>
         <ButtonsRow>
-          <Button textSize="14px" bgColor="var(--primary40)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="var(--white)" width="84px" height="36px">Button</Button>
-          <Button textSize="14px" bgColor="var(--primary40)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="var(--white)" width="104px" height="36px">
+          <Button textSize="14px" bgColor="var(--primary40)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="white" width="84px" height="36px">Button</Button>
+          <Button textSize="14px" bgColor="var(--primary40)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="white" width="104px" height="36px">
             <i className="fas fa-check icon-check"></i>
             Button
           </Button>
-          <Button bgColor="var(--primary40)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="var(--white)" iconOnly width="36px" height="36px">
+          <Button bgColor="var(--primary40)" textColor="var(--primary100)" hoverColor="var(--primary100)" hoverTextColor="white" iconOnly width="36px" height="36px">
             <i className="fas fa-cog icon-cog"></i>
           </Button>
         </ButtonsRow>
@@ -239,12 +239,12 @@ const ButtonViewer = () => {
       <ButtonsGroup>
         <GroupTitle>Destructive Secondary</GroupTitle>
         <ButtonsRow>
-          <Button textSize="14px" bgColor="var(--red30)" textColor="var(--red100)" hoverColor="var(--red100)" hoverTextColor="var(--white)" width="84px" height="36px">Button</Button>
-          <Button textSize="14px" bgColor="var(--red30)" textColor="var(--red100)" hoverColor="var(--red100)" hoverTextColor="var(--white)" width="104px" height="36px">
+          <Button textSize="14px" bgColor="var(--red30)" textColor="var(--red100)" hoverColor="var(--red100)" hoverTextColor="white" width="84px" height="36px">Button</Button>
+          <Button textSize="14px" bgColor="var(--red30)" textColor="var(--red100)" hoverColor="var(--red100)" hoverTextColor="white" width="104px" height="36px">
             <i className="fas fa-trash icon-trash"></i>
             Button
           </Button>
-          <Button bgColor="var(--red30)" textColor="var(--red100)" hoverColor="var(--red100)" hoverTextColor="var(--white)" iconOnly width="36px" height="36px">
+          <Button bgColor="var(--red30)" textColor="var(--red100)" hoverColor="var(--red100)" hoverTextColor="white" iconOnly width="36px" height="36px">
             <i className="fas fa-trash icon-trash"></i>
           </Button>
         </ButtonsRow>

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const StyledButton = styled.button`
   background-color: ${({ $bgColor }) => $bgColor || 'var(--primary100)'};
-  color: ${({ $textColor }) => $textColor || 'var(--white)'};
+  color: ${({ $textColor }) => $textColor || 'white'};
   border: ${({ $borderColor }) => $borderColor ? `1px solid ${$borderColor}` : 'none'};
   border-radius: 5px;
   cursor: pointer;
