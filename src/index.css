@@ -2,11 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 :root {
-  font-family: "Inter", sans-serif;
-  --white: #ffffff;
   --general100: #131523;
   --general90: #333752;
   --general80: #5a607f;

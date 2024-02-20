@@ -2,7 +2,6 @@ import manuelPhoto from '../assets/manuel.webp'
 import mauricioPhoto from '../assets/mauricio.webp'
 import isabelPhoto from '../assets/isabel.webp'
 import javierPhoto from '../assets/javier.webp'
-import juanjoPhoto from '../assets/juanjo.webp'
 
 const developers = [
   {
@@ -27,12 +26,6 @@ const developers = [
     id: 'JEF',
     name: 'Javier Eiroa Fortes',
     photo: javierPhoto,
-    components: ['ButtonViewer']
-  },
-  {
-    id: 'JJMD',
-    name: 'Juan José Martínez Dalmedo',
-    photo: juanjoPhoto,
     components: ['ButtonViewer']
   }
 ]

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const StyledButton = styled.button`
   background-color: ${({ $bgColor }) => $bgColor || 'var(--primary100)'};
-  color: ${({ $textColor }) => $textColor || 'var(--white)'};
+  color: ${({ $textColor }) => $textColor || 'white'};
   border: ${({ $borderColor }) => $borderColor ? `1px solid ${$borderColor}` : 'none'};
   border-radius: 5px;
   cursor: pointer;
@@ -13,7 +13,6 @@ const StyledButton = styled.button`
   width: ${({ width }) => width || 'auto'};
   height: ${({ height }) => height || '40px'};
   padding: 10px ${({ $iconOnly }) => $iconOnly ? '10px' : '20px'};
-  font-family: 'Inter', sans-serif;
   font-size: ${({ $textSize }) => $textSize || '16px'};
   font-weight: 400;
   line-height: 24px;

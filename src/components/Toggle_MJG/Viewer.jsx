@@ -5,40 +5,43 @@ import styled from 'styled-components'
 const ToggleViewerContainer = styled.div`
   padding: 5px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 40px;
   align-items: flex-start;
   margin-top: 5px;
 `
 
 const MainTitle = styled.div`
-  font-family: 'Inter', sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
-  letter-spacing: 0px;
   text-align: left;
   color: var(--general100);
-  margin-bottom: 25px;
+  width: 100%;
+  margin-bottom: 10px;
 `
 
-const ToggleSizeTitle = styled.div`
-  font-family: 'Inter', sans-serif;
+const ToggleGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`
+
+const ToggleGroupTitle = styled.div`
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  letter-spacing: 0px;
   text-align: left;
   color: var(--general60);
   margin-bottom: 10px;
 `
 
-const TogglesContainer = styled.div`
+const TogglesRow = styled.div`
   display: flex;
   gap: 20px;
 `
 
 const ToggleLabel = styled.div`
-  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -49,32 +52,37 @@ const ToggleLabel = styled.div`
 `
 
 const ToggleViewer = () => {
-  const [checked, setChecked] = useState({ small: false, medium: false, large: false })
+  const [checked, setChecked] = useState({
+    blue: { small: false, medium: false, large: false },
+    red: { small: false, medium: false, large: false },
+    grey: { small: false, medium: false, large: false }
+  })
 
-  const handleChange = (size) => {
-    setChecked(prevState => ({ ...prevState, [size]: !prevState[size] }))
+  const handleChange = (color, size) => {
+    setChecked(prevState => ({
+      ...prevState,
+      [color]: { ...prevState[color], [size]: !prevState[color][size] }
+    }))
   }
+
+  const renderToggleGroup = (color) => (
+    <ToggleGroup key={color}>
+      <ToggleGroupTitle>{color.charAt(0).toUpperCase() + color.slice(1)}</ToggleGroupTitle>
+      <TogglesRow>
+        {['large', 'medium', 'small'].map(size => (
+          <ToggleLabel key={size}>
+            <Toggle size={size} color={color} checked={checked[color][size]} onChange={() => handleChange(color, size)} />
+            <span>{size.charAt(0).toUpperCase() + size.slice(1)}</span>
+          </ToggleLabel>
+        ))}
+      </TogglesRow>
+    </ToggleGroup>
+  )
 
   return (
     <ToggleViewerContainer>
-      <MainTitle>Toggle</MainTitle>
-      <ToggleSizeTitle>Toggle Size</ToggleSizeTitle>
-      <TogglesContainer>
-        <ToggleLabel>
-          <Toggle size="large" checked={checked.large} onChange={() => handleChange('large')} />
-          <span>Large</span>
-        </ToggleLabel>
-
-        <ToggleLabel>
-          <Toggle size="medium" checked={checked.medium} onChange={() => handleChange('medium')} />
-          <span>Medium</span>
-        </ToggleLabel>
-
-        <ToggleLabel>
-          <Toggle size="small" checked={checked.small} onChange={() => handleChange('small')} />
-          <span>Small</span>
-        </ToggleLabel>
-      </TogglesContainer>
+      <MainTitle>Toggles</MainTitle>
+      {['blue', 'red', 'grey'].map(color => renderToggleGroup(color))}
     </ToggleViewerContainer>
   )
 }
