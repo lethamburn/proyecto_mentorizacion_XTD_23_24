@@ -16,9 +16,9 @@ const App = () => {
     setSelectedDeveloper,
     selectedComponent,
     setSelectedComponent
-  } = useSelection()
+  } = useSelection(developers)
 
-  const components = selectedDeveloper.components.map((componentId) => {
+  const components = selectedDeveloper?.components.map((componentId) => {
     switch (componentId) {
       case 'Button_MJG':
         return { id: componentId, name: 'Buttons', component: ButtonMJG }
@@ -51,9 +51,7 @@ const App = () => {
           isVisible={isSidebarOpen}
           developers={developers}
           selectedDeveloper={selectedDeveloper}
-          onSelectDeveloper={(developer) => {
-            setSelectedDeveloper(developer)
-          }}
+          onSelectDeveloper={setSelectedDeveloper}
           components={components}
           onSelectComponent={handleSelectComponent}
         />

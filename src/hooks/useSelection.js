@@ -1,28 +1,21 @@
 import { useState, useEffect } from 'react'
-import developers from '../data/developers'
 
-export const useSelection = () => {
-  const [selectedDeveloper, setSelectedDeveloper] = useState(developers[0])
+export const useSelection = (developersData) => {
+  const [selectedDeveloper, setSelectedDeveloper] = useState(developersData[0])
   const [selectedComponent, setSelectedComponent] = useState(null)
-  const [isSidebarOpen, setIsSidebarOpen] = useState(window.innerWidth > 650)
 
   useEffect(() => {
-    const handleResize = () => setIsSidebarOpen(window.innerWidth > 650)
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
-  useEffect(() => {
-    const firstComponent = selectedDeveloper.components.length > 0 ? selectedDeveloper.components[0] : null
-    setSelectedComponent(firstComponent)
+    setSelectedComponent(
+      selectedDeveloper?.components && selectedDeveloper.components.length > 0
+        ? { id: selectedDeveloper.components[0], component: null }
+        : null
+    )
   }, [selectedDeveloper])
 
   return {
     selectedDeveloper,
     setSelectedDeveloper,
     selectedComponent,
-    setSelectedComponent,
-    isSidebarOpen,
-    setIsSidebarOpen
+    setSelectedComponent
   }
 }

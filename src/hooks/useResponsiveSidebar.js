@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react'
 
-export const useResponsiveSidebar = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(window.innerWidth > 650)
+export const useResponsiveSidebar = (breakpoint = 650) => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(window.innerWidth > breakpoint)
 
   useEffect(() => {
-    const handleResize = () => setIsSidebarOpen(window.innerWidth > 650)
-
+    const handleResize = () => setIsSidebarOpen(window.innerWidth > breakpoint)
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  }, [breakpoint])
 
   return [isSidebarOpen, setIsSidebarOpen]
 }
