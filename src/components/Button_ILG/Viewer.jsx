@@ -1,12 +1,15 @@
 import Button from './Button'
 
-const ButtonViewer = () => {
+const Viewer = () => {
   return (
-    <>
-      <Button>Check</Button>
-      <Button primary>Button</Button>
-    </>
+    <div>
+      <h1 style={{ color: 'var(--general100)', marginBottom: '20px' }}>Mentorización</h1>
+      <div style={{ color: 'var(--general80)', fontSize: '18px' }}>
+        <Button>Click</Button>
+        <Button primary>Primary</Button>
+      </div>
+    </div>
   )
 }
 
-export default ButtonViewer
+export default Viewer

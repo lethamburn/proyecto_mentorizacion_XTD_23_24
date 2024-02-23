@@ -1,16 +1,14 @@
 import ButtonViewer from './components/Demo/Viewer'
-import './App.css'
-import AccessibilityButton from './components/AccessibilityButton/AccessibilityButton'
+import ButtonILG from './components/Button_ILG/Button'
 
 const App = () => {
   return (
-    <>
-      <h1>Mentorización</h1>
-      <p>Ejemplo de componente:</p>
+    <div>
+      <h1>Components_ILG</h1>
+      <p>Librería de Componentes</p>
       <ButtonViewer />
-      <AccessibilityButton />
-
-    </>
+      <ButtonILG />
+    </div>
   )
 }
 
