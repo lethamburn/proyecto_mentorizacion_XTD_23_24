@@ -47,63 +47,69 @@ const SpinnerLabel = styled.div`
   color: var(--general100);
 `
 
-const SpinnerViewer = () => {
-  return (
-    <SpinnersContainer>
-      <SectionTitle>Circles</SectionTitle>
-      <SpinnersGroup>
-        <GroupTitle>Blue</GroupTitle>
+const SpinnerViewer = () => (
+  <SpinnersContainer>
+    <SectionTitle>Circles</SectionTitle>
+    {['primary100', 'red100', 'general80'].map((color, index) => (
+      <SpinnersGroup key={index}>
+        <GroupTitle>{color === 'primary100' ? 'Blue' : color === 'red100' ? 'Red' : 'Grey'}</GroupTitle>
         <SpinnersRow>
           <SpinnerLabel>
-            <Spinner size="large" color="primary100" />
+            <Spinner size="large" color={color} type="circle" />
             <span>Large</span>
           </SpinnerLabel>
           <SpinnerLabel>
-            <Spinner size="medium" color="primary100" />
+            <Spinner size="medium" color={color} type="circle" />
             <span>Medium</span>
           </SpinnerLabel>
           <SpinnerLabel>
-            <Spinner size="small" color="primary100" />
+            <Spinner size="small" color={color} type="circle" />
             <span>Small</span>
           </SpinnerLabel>
         </SpinnersRow>
       </SpinnersGroup>
-      <SpinnersGroup>
-        <GroupTitle>Red</GroupTitle>
+    ))}
+    <SectionTitle>Dots</SectionTitle>
+    {['primary100', 'red100', 'general80'].map((color, index) => (
+      <SpinnersGroup key={index}>
+        <GroupTitle>{color === 'primary100' ? 'Blue' : color === 'red100' ? 'Red' : 'Grey'}</GroupTitle>
         <SpinnersRow>
           <SpinnerLabel>
-            <Spinner size="large" color="red100" />
+            <Spinner size="large" color={color} type="dot" />
             <span>Large</span>
           </SpinnerLabel>
           <SpinnerLabel>
-            <Spinner size="medium" color="red100" />
+            <Spinner size="medium" color={color} type="dot" />
             <span>Medium</span>
           </SpinnerLabel>
           <SpinnerLabel>
-            <Spinner size="small" color="red100" />
+            <Spinner size="small" color={color} type="dot" />
             <span>Small</span>
           </SpinnerLabel>
         </SpinnersRow>
       </SpinnersGroup>
-      <SpinnersGroup>
-        <GroupTitle>Grey</GroupTitle>
+    ))}
+   <SectionTitle>Bar Loader</SectionTitle>
+    {['primary100', 'red100', 'general80'].map((color) => (
+      <SpinnersGroup key={color}>
+        <GroupTitle>{color === 'primary100' ? 'Blue' : color === 'red100' ? 'Red' : 'Grey'}</GroupTitle>
         <SpinnersRow>
           <SpinnerLabel>
-            <Spinner size="large" color="general80" />
+            <Spinner size="large" color={color} type="barLoader" />
             <span>Large</span>
           </SpinnerLabel>
           <SpinnerLabel>
-            <Spinner size="medium" color="general80" />
+            <Spinner size="medium" color={color} type="barLoader" />
             <span>Medium</span>
           </SpinnerLabel>
           <SpinnerLabel>
-            <Spinner size="small" color="general80" />
+            <Spinner size="small" color={color} type="barLoader" />
             <span>Small</span>
           </SpinnerLabel>
         </SpinnersRow>
       </SpinnersGroup>
-    </SpinnersContainer>
-  )
-}
+    ))}
+  </SpinnersContainer>
+)
 
 export default SpinnerViewer
