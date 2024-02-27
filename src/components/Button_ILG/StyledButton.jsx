@@ -2,13 +2,12 @@ import styled from 'styled-components'
 
 const StyledButtonContainer = styled.div`
   display: flex;
-  justify-content: flex-end; 
-  margin-top: 20px; 
+  justify-content: flex-end;
+  margin-top: 20px;
 `
 
 const StyledButton = styled.button`
-  background-color: ${(props) =>
-    props.primary ? 'var(--primary100)' : 'var(--general100)'};
+  background-color: ${(props) => (props.primary ? 'var(--primary100)' : 'var(--general100)')};
   color: ${(props) => (props.primary ? 'var(--general30)' : 'var(--primary30)')};
   padding: 14px 24px;
   margin-right: 20px;
@@ -25,8 +24,7 @@ const StyledButton = styled.button`
   position: relative;
 
   &:hover {
-    background-color: ${(props) =>
-      props.primary ? 'var(--primary80)' : 'var(--general80)'};
+    background-color: ${(props) => (props.primary ? 'var(--primary80)' : 'var(--general80)')};
     color: ${(props) => (props.primary ? 'var(--general20)' : 'var(--primary20)')};
   }
 

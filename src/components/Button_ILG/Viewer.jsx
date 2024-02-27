@@ -1,12 +1,17 @@
-import Button from './Button'
+import styled from 'styled-components'
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: #BF4F74;
+`
 
 const Viewer = () => {
   return (
     <div>
-      <h1 style={{ color: 'var(--general100)', marginBottom: '20px' }}>Mentorización</h1>
+      {/* Usamos el componente Title en lugar de <h1> */}
+      <Title>Mentorización</Title>
       <div style={{ color: 'var(--general80)', fontSize: '18px' }}>
-        <Button>Click</Button>
-        <Button primary>Primary</Button>
+        {/* Aquí irían los botones estilizados */}
       </div>
     </div>
   )
