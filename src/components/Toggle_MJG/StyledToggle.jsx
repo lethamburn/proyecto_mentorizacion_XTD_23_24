@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 const sizes = {
-  small: { width: '26.3px', height: '20px', circleSize: '12px' },
-  medium: { width: '44px', height: '24px', circleSize: '16px' },
-  large: { width: '48px', height: '28px', circleSize: '20px' }
+  small: { width: '26.3px', height: '20px', circleSize: '12px', textSize: '4px', iconSize: '6px' },
+  medium: { width: '44px', height: '24px', circleSize: '16px', textSize: '9px', iconSize: '17px' },
+  large: { width: '48px', height: '28px', circleSize: '20px', textSize: '10px', iconSize: '19px' }
 }
 
 const colorMap = {
@@ -21,6 +21,11 @@ const colorMap = {
     base: 'var(--general40)',
     hover: 'var(--general60)',
     active: 'var(--general90)'
+  },
+  purple: {
+    base: 'var(--purple40)',
+    hover: 'var(--purple60)',
+    active: 'var(--purple90)'
   }
 }
 
@@ -30,6 +35,11 @@ const StyledToggle = styled.div`
   height: ${({ size }) => sizes[size].height};
   border-radius: ${({ size }) => sizes[size].height};
   background-color: ${({ color }) => colorMap[color].base};
+  display: flex;
+  align-items: center;
+  font-size: ${({ size }) => sizes[size].textSize};
+  --icon-size: ${({ size }) => sizes[size].iconSize};
+  padding: 0 4px;
 
   input {
     opacity: 0;
@@ -44,20 +54,23 @@ const StyledToggle = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: ${({ color }) => colorMap[color].base};
     transition: 0.4s;
     border-radius: ${({ size }) => sizes[size].height};
+    display: flex;
+    align-items: center;
+    justify-content: ${({ checked }) => checked ? 'flex-start' : 'flex-end'};
+    color: white;
 
     &:before {
-      position: absolute;
       content: "";
+      position: absolute;
       height: ${({ size }) => sizes[size].circleSize};
       width: ${({ size }) => sizes[size].circleSize};
       left: 4px;
+      bottom: ${({ size }) => `calc((${sizes[size].height} - ${sizes[size].circleSize}) / 2)`};
       background-color: white;
       transition: 0.4s;
       border-radius: 50%;
-      bottom: ${({ size }) => `calc((${sizes[size].height} - ${sizes[size].circleSize}) / 2)`};
     }
 
     &:hover {
