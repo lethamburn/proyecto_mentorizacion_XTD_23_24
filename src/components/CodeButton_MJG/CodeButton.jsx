@@ -22,7 +22,7 @@ const CodeButton = ({ selected, onChange }) => {
           checked={selected === 'optiontwo'}
           onChange={() => onChange('optiontwo')}
         />
-        <label htmlFor="optiontwo" className="right">Html</label>
+        <label htmlFor="optiontwo" className="right">html</label>
 
         <span className={selected === 'optiontwo' ? 'right' : ''}></span>
       </div>
