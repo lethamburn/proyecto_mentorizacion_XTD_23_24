@@ -49,4 +49,36 @@ const StyledCodeButton = styled.div`
   }
 `
 
+export const CodeContainer = styled.div`
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+`
+
+export const CopyButton = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: var(--general90);
+  padding: 5px 10px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  color: #FFF;
+  font-size: 0.8em;
+  white-space: nowrap;
+  cursor: pointer;
+
+  i {
+    font-size: 1.25em;
+  }
+`
+
+export const SyntaxStyle = {
+  borderRadius: '0 0 5px 5px',
+  padding: '15px',
+  margin: 0
+}
+
 export default StyledCodeButton
