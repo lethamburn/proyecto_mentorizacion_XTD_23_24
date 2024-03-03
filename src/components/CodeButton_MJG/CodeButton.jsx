@@ -1,20 +1,6 @@
-import { useState } from 'react'
-import StyledCodeButton, { CodeContainer, CopyButton, SyntaxStyle } from './StyledCodeButton'
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+import StyledCodeButton from './StyledCodeButton'
 
-const CodeButton = ({ selected, onChange, codeToShow }) => {
-  const [isCopied, setIsCopied] = useState(false)
-
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(codeToShow).then(() => {
-      setIsCopied(true)
-      setTimeout(() => setIsCopied(false), 3000)
-    }, (err) => {
-      console.error('Error al copiar el código: ', err)
-    })
-  }
-
+const CodeButton = ({ selected, onChange }) => {
   return (
     <StyledCodeButton>
       <div className="switch">
@@ -36,21 +22,10 @@ const CodeButton = ({ selected, onChange, codeToShow }) => {
           checked={selected === 'optiontwo'}
           onChange={() => onChange('optiontwo')}
         />
-        <label htmlFor="optiontwo" className="right">HTML</label>
+        <label htmlFor="optiontwo" className="right">Html</label>
 
         <span className={selected === 'optiontwo' ? 'right' : ''}></span>
       </div>
-      {selected === 'optiontwo' && (
-        <CodeContainer>
-          <CopyButton onClick={copyToClipboard}>
-            <i className={isCopied ? 'fas fa-check' : 'far fa-clipboard'} style={{ marginRight: '5px' }}></i>
-            {isCopied ? 'Copied!' : 'Copy code'}
-          </CopyButton>
-          <SyntaxHighlighter language="jsx" style={{ ...atomOneDark, ...SyntaxStyle }}>
-            {codeToShow}
-          </SyntaxHighlighter>
-        </CodeContainer>
-      )}
     </StyledCodeButton>
   )
 }

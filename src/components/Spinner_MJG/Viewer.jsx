@@ -61,10 +61,10 @@ const SpinnerLabel = styled.div`
 `
 
 const SpinnerViewer = () => {
-  const [showCode, setShowCode] = useState({ Circles: false, Dots: false, BarLoader: false })
+  const [showCode, setShowCode] = useState(null)
 
   const handleToggleShowCode = (group) => {
-    setShowCode(prev => ({ ...prev, [group]: !prev[group] }))
+    setShowCode(prev => (prev === group ? null : group))
   }
 
   const spinnerGroups = [
@@ -87,11 +87,11 @@ const SpinnerViewer = () => {
         <div key={group.title}>
           <SectionTitle>{group.title}</SectionTitle>
           <CodeButton
-            selected={showCode[group.title] ? 'optiontwo' : 'optionone'}
+            selected={showCode === group.title ? 'optiontwo' : 'optionone'}
             onChange={() => handleToggleShowCode(group.title)}
-            codeToShow={generateCodeString(group)}
+            codeToShow={showCode === group.title ? generateCodeString(group) : ''}
           />
-          {!showCode[group.title] && (
+          {showCode !== group.title && (
             <SpinnersWrapper>
               {group.colorCodes.map((colorCode, index) => (
                 <SpinnersGroup key={index}>
