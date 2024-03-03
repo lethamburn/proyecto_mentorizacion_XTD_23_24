@@ -102,7 +102,7 @@ const Viewer = () => {
             <span style={{ cursor: 'pointer', fontSize: '0.8em' }} onClick={copyToClipboard}>{isCopied ? 'Copied!' : 'Copy code'}</span>
           </div>
           <SyntaxHighlighter
-            language="javascript"
+            language="html"
             style={atomOneDark}
             customStyle={{ borderRadius: '0 0 5px 5px', padding: '15px', margin: 0 }}
             wrapLongLines={true}
