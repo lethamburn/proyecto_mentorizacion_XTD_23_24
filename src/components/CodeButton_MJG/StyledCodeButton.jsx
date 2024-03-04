@@ -6,7 +6,6 @@ const StyledCodeButton = styled.div`
     width: 100px;
     height: 20px;
     border-radius: 5px;
-    padding: 1px;
     display: inline-block;
     position: relative;
   }
