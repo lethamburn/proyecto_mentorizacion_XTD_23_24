@@ -73,7 +73,7 @@ const CodeButton = ({ element, codeString, language = 'html', customStyle, wrapL
             <SyntaxHighlighter
               language={language}
               style={atomOneDark}
-              customStyle={{ ...customStyle, borderRadius: '0 0 5px 5px', padding: '15px', margin: 0 }}
+              customStyle={{ ...customStyle, borderRadius: '0 0 5px 5px', padding: '15px', marginBottom: '40px' }}
               wrapLongLines={wrapLongLines}
             >
               {codeString}
