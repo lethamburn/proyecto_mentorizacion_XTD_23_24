@@ -1,10 +1,11 @@
+import { useState } from 'react'
 import styled from 'styled-components'
 import Button from './Button'
+import CodeButton from '../CodeButton_MJG/CodeButton'
 
 const ButtonsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 50px;
   margin-top: 5px;
   padding: 5px;
 `
@@ -17,6 +18,7 @@ const ButtonSizeContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
+  margin-bottom: 40px;
 `
 
 const SectionTitle = styled.h2`
@@ -26,6 +28,7 @@ const SectionTitle = styled.h2`
   font-weight: 700;
   line-height: 36px;
   text-align: left;
+  margin-bottom: 26px;
 `
 
 const ButtonsGroup = styled.div`
@@ -48,10 +51,55 @@ const ButtonsRow = styled.div`
   gap: 20px;
 `
 
+const largeButtonsCodeString = `
+<Button width="99px" height="48px">Large Button</Button>
+<Button width="119px" height="48px">
+  <i className="fas fa-check icon-check"></i>
+  Large Button
+</Button>
+<Button iconOnly width="48px" height="48px">
+  <i className="fas fa-cog icon-cog"></i>
+</Button>
+`
+
+const mediumButtonsCodeString = `
+<Button width="99px" height="40px">Medium Button</Button>
+<Button width="119px" height="40px">
+  <i className="fas fa-check icon-check"></i>
+  Medium Button
+</Button>
+<Button iconOnly width="40px" height="40px">
+  <i className="fas fa-cog icon-cog"></i>
+</Button>
+`
+
+const smallButtonsCodeString = `
+<Button textSize="14px" width="84px" height="36px">Small Button</Button>
+<Button textSize="14px" width="104px" height="36px">
+  <i className="fas fa-check icon-check"></i>
+  Small Button
+</Button>
+<Button iconOnly width="36px" height="36px">
+  <i className="fas fa-cog icon-cog"></i>
+</Button>
+`
+
 const ButtonViewer = () => {
+  const [showLargeCode, setShowLargeCode] = useState(false)
+  const [showMediumCode, setShowMediumCode] = useState(false)
+  const [showSmallCode, setShowSmallCode] = useState(false)
+
   return (
     <ButtonsContainer>
       <SectionTitle>Large</SectionTitle>
+      <CodeButton
+        codeString={largeButtonsCodeString}
+        language="html"
+        wrapLongLines={true}
+        onToggleShowCode={() => setShowLargeCode(!showLargeCode)}
+        elementId="largeButtons"
+      />
+      {showLargeCode || (
       <ButtonSizeContainer>
         <ButtonsGroup>
           <GroupTitle>Primary</GroupTitle>
@@ -119,8 +167,17 @@ const ButtonViewer = () => {
           </ButtonsRow>
         </ButtonsGroup>
         </ButtonSizeContainer>
+      )}
 <SectionTitle>Medium</SectionTitle>
-<ButtonSizeContainer>
+<CodeButton
+        codeString={mediumButtonsCodeString}
+        language="html"
+        wrapLongLines={true}
+        onToggleShowCode={() => setShowMediumCode(!showMediumCode)}
+        elementId="mediumButtons"
+      />
+      {showMediumCode || (
+        <ButtonSizeContainer>
   <ButtonsGroup>
     <GroupTitle>Primary</GroupTitle>
     <ButtonsRow>
@@ -186,9 +243,19 @@ const ButtonViewer = () => {
       </Button>
     </ButtonsRow>
   </ButtonsGroup>
-</ButtonSizeContainer>
+  </ButtonSizeContainer>
+      )}
+
 <SectionTitle>Small</SectionTitle>
-<ButtonSizeContainer>
+<CodeButton
+        codeString={smallButtonsCodeString}
+        language="html"
+        wrapLongLines={true}
+        onToggleShowCode={() => setShowSmallCode(!showSmallCode)}
+        elementId="smallButtons"
+      />
+      {showSmallCode || (
+        <ButtonSizeContainer>
   <ButtonsGroup>
     <GroupTitle>Primary</GroupTitle>
     <ButtonsRow>
@@ -254,8 +321,9 @@ const ButtonViewer = () => {
       </Button>
     </ButtonsRow>
   </ButtonsGroup>
-</ButtonSizeContainer>
-</ButtonsContainer>
+  </ButtonSizeContainer>
+      )}
+    </ButtonsContainer>
   )
 }
 

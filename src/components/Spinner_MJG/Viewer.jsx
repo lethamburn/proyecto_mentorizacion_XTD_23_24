@@ -61,21 +61,30 @@ const SpinnerLabel = styled.div`
 `
 
 const circlesCodeString = `
-<Spinner size="large" color="primary100" type="circle" />
-<Spinner size="medium" color="primary100" type="circle" />
-<Spinner size="small" color="primary100" type="circle" />
+<Spinner size="large" color="blue" type="circle" />
+<Spinner size="medium" color="blue" type="circle" />
+<Spinner size="small" color="blue" type="circle" />
+<Spinner size="large" color="red" type="circle" />
+<Spinner size="medium" color="red" type="circle" />
+<Spinner size="small" color="red" type="circle" />
 `
 
 const dotsCodeString = `
-<Spinner size="large" color="primary100" type="dot" />
-<Spinner size="medium" color="primary100" type="dot" />
-<Spinner size="small" color="primary100" type="dot" />
+<Spinner size="large" color="blue" type="dot" />
+<Spinner size="medium" color="blue" type="dot" />
+<Spinner size="small" color="blue" type="dot" />
+<Spinner size="large" color="red" type="dot" />
+<Spinner size="medium" color="red" type="dot" />
+<Spinner size="small" color="red" type="dot" />
 `
 
 const barLoaderCodeString = `
-<Spinner size="large" color="primary100" type="barLoader" />
-<Spinner size="medium" color="primary100" type="barLoader" />
-<Spinner size="small" color="primary100" type="barLoader" />
+<Spinner size="large" color="blue" type="barLoader" />
+<Spinner size="medium" color="blue" type="barLoader" />
+<Spinner size="small" color="blue" type="barLoader" />
+<Spinner size="large" color="red" type="barLoader" />
+<Spinner size="medium" color="red" type="barLoader" />
+<Spinner size="small" color="red" type="barLoader" />
 `
 
 const SpinnerViewer = () => {

@@ -6,6 +6,7 @@ import ButtonViewer from './components/Demo/Viewer'
 import ButtonMJG from './components/Button_MJG/Viewer'
 import SpinnerMJG from './components/Spinner_MJG/Viewer'
 import ToggleMJG from './components/Toggle_MJG/Viewer'
+import ProgressMarkerMJG from './components/ProgressMarker_MJG/Viewer'
 import { useResponsiveSidebar } from './hooks/useResponsiveSidebar'
 import { useSelection } from './hooks/useSelection'
 
@@ -26,6 +27,8 @@ const App = () => {
         return { id: componentId, name: 'Spinners', component: SpinnerMJG }
       case 'Toggle_MJG':
         return { id: componentId, name: 'Toggles', component: ToggleMJG }
+      case 'ProgressMarker_MJG':
+        return { id: componentId, name: '🚧 In progress 🚧', component: ProgressMarkerMJG }
       case 'ButtonViewer':
         return { id: componentId, name: 'Buttons', component: ButtonViewer }
       default:

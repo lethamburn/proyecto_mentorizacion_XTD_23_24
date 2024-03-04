@@ -8,7 +8,7 @@ const developers = [
     id: 'MJG',
     name: 'Manuel Jimena García',
     photo: manuelPhoto,
-    components: ['Button_MJG', 'Spinner_MJG', 'Toggle_MJG']
+    components: ['Button_MJG', 'Spinner_MJG', 'Toggle_MJG', 'ProgressMarker_MJG']
   },
   {
     id: 'MVB',
