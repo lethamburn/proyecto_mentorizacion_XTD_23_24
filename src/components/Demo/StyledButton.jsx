@@ -7,5 +7,19 @@ const StyledButton = styled.button`
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+
+
+  &:hover {
+    background-color: ${({ $hoverColor }) => $hoverColor || 'var(--primary40)'};
+    color: ${({ $hoverTextColor }) => $hoverTextColor || 'var(--primary100)'};
+    
+    }
+  }
 `
 export default StyledButton
