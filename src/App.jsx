@@ -3,12 +3,14 @@ import Header from './components/Header_MJG/Header'
 import Sidebar from './components/Sidebar_MJG/Sidebar'
 import developers from './data/developers'
 import ButtonViewer from './components/Demo/Viewer'
+
 import ButtonMJG from './components/Button_MJG/Viewer'
 import SpinnerMJG from './components/Spinner_MJG/Viewer'
 import ToggleMJG from './components/Toggle_MJG/Viewer'
 import ProgressMarkerMJG from './components/ProgressMarker_MJG/Viewer'
 import { useResponsiveSidebar } from './hooks/useResponsiveSidebar'
 import { useSelection } from './hooks/useSelection'
+
 
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useResponsiveSidebar()
@@ -44,6 +46,7 @@ const App = () => {
 
   return (
     <>
+
       <Header
         developer={selectedDeveloper}
         toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -62,6 +65,7 @@ const App = () => {
           {selectedComponent && selectedComponent.component ? React.createElement(selectedComponent.component) : <div>No component selected</div>}
         </div>
       </div>
+
     </>
   )
 }

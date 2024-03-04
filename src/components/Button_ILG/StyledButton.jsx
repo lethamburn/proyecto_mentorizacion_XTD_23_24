@@ -7,6 +7,7 @@ const StyledButtonContainer = styled.div`
 `
 
 const StyledButton = styled.button`
+
   background-color: ${(props) => (props.primary ? 'var(--primary100)' : 'var(--general100)')};
   color: ${(props) => (props.primary ? 'var(--general30)' : 'var(--primary30)')};
   padding: 14px 24px;
@@ -37,6 +38,7 @@ const StyledButton = styled.button`
     height: 100%;
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+
   }
 `
 
