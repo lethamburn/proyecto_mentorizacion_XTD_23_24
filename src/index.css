@@ -2,10 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 :root {
-  font-family: "Inter", sans-serif;
   --general100: #131523;
   --general90: #333752;
   --general80: #5a607f;
@@ -29,7 +29,7 @@
   --red60: #f8919d;
   --red50: #fab3bc;
   --red40: #fcd5d9;
-  --red30: #ffe7ea;
+  --red30: #fde7ea;
   --green100: #06a561;
   --green90: #1df286;
   --green80: #25e191;
@@ -46,4 +46,12 @@
   --yellow50: #ffeca3;
   --yellow40: #fff4c9;
   --yellow30: #fff9e1;
+  --purple100: #64008b;
+  --purple90: #a300e4;
+  --purple80: #b65fd8;
+  --purple70: #b161d1;
+  --purple60: #bd80d4;
+  --purple50: #e195ff;
+  --purple40: #e59dff;
+  --purple30: #eec4ff;
 }
