@@ -4,7 +4,6 @@ import Sidebar from './components/Sidebar_MJG/Sidebar'
 import developers from './data/developers'
 import ButtonViewer from './components/Demo/Viewer'
 import ButtonMJG from './components/Button_MJG/Viewer'
-import CodeButtonMJG from './components/CodeButton_MJG/Viewer'
 import SpinnerMJG from './components/Spinner_MJG/Viewer'
 import ToggleMJG from './components/Toggle_MJG/Viewer'
 import { useResponsiveSidebar } from './hooks/useResponsiveSidebar'
@@ -27,8 +26,6 @@ const App = () => {
         return { id: componentId, name: 'Spinners', component: SpinnerMJG }
       case 'Toggle_MJG':
         return { id: componentId, name: 'Toggles', component: ToggleMJG }
-      case 'CodeButton_MJG':
-        return { id: componentId, name: 'CodeButton', component: CodeButtonMJG }
       case 'ButtonViewer':
         return { id: componentId, name: 'Buttons', component: ButtonViewer }
       default:

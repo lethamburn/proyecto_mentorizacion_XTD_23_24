@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Spinner from './Spinner'
 import CodeButton from '../CodeButton_MJG/CodeButton'
 import styled from 'styled-components'
@@ -5,7 +6,6 @@ import styled from 'styled-components'
 const SpinnersContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 50px;
   padding: 5px;
   margin-top: 5px;
 `
@@ -17,6 +17,7 @@ const SectionTitle = styled.h2`
   font-weight: 700;
   line-height: 36px;
   text-align: left;
+  margin-bottom: 26px;
 `
 
 const SpinnersWrapper = styled.div`
@@ -27,6 +28,7 @@ const SpinnersWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
+  margin-bottom: 40px;
 `
 
 const SpinnersGroup = styled.div`
@@ -76,10 +78,27 @@ const barLoaderCodeString = `
 <Spinner size="small" color="primary100" type="barLoader" />
 `
 
-const SpinnerViewer = () => (
-  <SpinnersContainer>
+const SpinnerViewer = () => {
+  const [showCircles, setShowCircles] = useState(true)
+  const [showDots, setShowDots] = useState(true)
+  const [showBarLoader, setShowBarLoader] = useState(true)
+
+  const toggleCircles = () => setShowCircles(prev => !prev)
+  const toggleDots = () => setShowDots(prev => !prev)
+  const toggleBarLoader = () => setShowBarLoader(prev => !prev)
+
+  return (
+    <SpinnersContainer>
     <SectionTitle>Circles</SectionTitle>
-    <SpinnersWrapper>
+    <CodeButton
+      codeString={circlesCodeString}
+      language="html"
+      wrapLongLines={true}
+      onToggleShowCode={toggleCircles}
+      elementId="circles"
+    />
+    {showCircles && (
+      <SpinnersWrapper>
       {['primary100', 'red100', 'general80', 'purple90'].map((color, index) => (
         <SpinnersGroup key={index}>
           <GroupTitle>{color === 'primary100' ? 'Blue' : color === 'red100' ? 'Red' : color === 'purple90' ? 'Purple' : 'Grey'}</GroupTitle>
@@ -100,10 +119,17 @@ const SpinnerViewer = () => (
         </SpinnersGroup>
       ))}
     </SpinnersWrapper>
-    <CodeButton codeString={circlesCodeString} language="jsx" wrapLongLines={true} />
-
-    <SectionTitle>Dots</SectionTitle>
-    <SpinnersWrapper>
+    )}
+     <SectionTitle>Dots</SectionTitle>
+      <CodeButton
+        codeString={dotsCodeString}
+        language="html"
+        wrapLongLines={true}
+        onToggleShowCode={toggleDots}
+        elementId="dots"
+      />
+      {showDots && (
+        <SpinnersWrapper>
       {['primary100', 'red100', 'general80', 'purple90'].map((color, index) => (
         <SpinnersGroup key={index}>
           <GroupTitle>{color === 'primary100' ? 'Blue' : color === 'red100' ? 'Red' : color === 'purple90' ? 'Purple' : 'Grey'}</GroupTitle>
@@ -124,10 +150,17 @@ const SpinnerViewer = () => (
         </SpinnersGroup>
       ))}
     </SpinnersWrapper>
-    <CodeButton codeString={dotsCodeString} language="jsx" wrapLongLines={true} />
-
+      )}
     <SectionTitle>Bar Loader</SectionTitle>
-    <SpinnersWrapper>
+      <CodeButton
+        codeString={barLoaderCodeString}
+        language="html"
+        wrapLongLines={true}
+        onToggleShowCode={toggleBarLoader}
+        elementId="barLoader"
+      />
+      {showBarLoader && (
+        <SpinnersWrapper>
       {['primary100', 'red100', 'general80', 'purple90'].map((color) => (
         <SpinnersGroup key={color}>
           <GroupTitle>{color === 'primary100' ? 'Blue' : color === 'red100' ? 'Red' : color === 'purple90' ? 'Purple' : 'Grey'}</GroupTitle>
@@ -148,8 +181,9 @@ const SpinnerViewer = () => (
         </SpinnersGroup>
       ))}
     </SpinnersWrapper>
-    <CodeButton codeString={barLoaderCodeString} language="jsx" wrapLongLines={true} />
-  </SpinnersContainer>
-)
+      )}
+    </SpinnersContainer>
+  )
+}
 
 export default SpinnerViewer
