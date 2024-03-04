@@ -7,11 +7,15 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --ext js,jsx --fix",
     "preview": "vite preview"
   },
   "dependencies": {
+    "components": "^0.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-syntax-highlighter": "^15.5.0",
+    "styled": "^1.0.0",
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
